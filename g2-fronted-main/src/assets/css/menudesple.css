@@ -1,0 +1,72 @@
+.icon {
+  cursor: pointer;
+  width: 35px;
+  height: 30px;
+  margin: 10px;
+  position: relative;
+}
+
+.icon span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.icon span:nth-child(1) {
+  top: 0;
+}
+
+.icon span:nth-child(2) {
+  top: 13px;
+}
+
+.icon span:nth-child(3) {
+  top: 26px;
+}
+
+.icon.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 13px;
+}
+
+.icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 13px;
+}
+
+.menu-lateral {
+  position: fixed;
+  right: -250px; /* Initial position outside of the screen */
+  top: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: right 0.3s ease;
+  z-index: 1000; /* Ensure the menu is on top */
+}
+
+.menu-lateral.open {
+  right: 0; /* Bring the menu into view */
+}
+
+.menu-lateral a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+.menu-lateral a:hover {
+  text-decoration: underline;
+}

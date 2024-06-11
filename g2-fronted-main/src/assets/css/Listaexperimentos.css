@@ -1,0 +1,103 @@
+.pagina-experimentos-container {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; /* Agregar esta propiedad para recortar el contenido que se desborda */
+}
+
+.barra {
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(51, 51, 51, 0.8); /* Gris 2 con opacidad */
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center; /* Centramos el contenido de la barra */
+  align-items: center;
+  position: fixed; /* Fijar la barra en la parte superior */
+  top: 0; /* Posicionar la barra en la parte superior */
+  z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+}
+
+.elemento {
+  margin: 0;
+  font-size: 3em; /* Agrandar el tamaño de la fuente */
+  color: #79a981; /* Verde de la empresa */
+}
+
+.flecha {
+  position: absolute; /* Posicionar la flecha de manera absoluta */
+  left: 20px; /* Alinear la flecha a la izquierda */
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #79a981; /* Verde de la empresa */
+  padding: 10px;
+}
+
+.recuadro-container {
+  display: flex;
+  flex-direction: column; /* Mostrar cuadros uno debajo del otro */
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 80px; /* Espaciado para compensar la barra fija */
+}
+
+.recuadro {
+  margin-bottom: 20px;
+  width: 80%; /* Ajusta el ancho según sea necesario */
+  padding: 40px;
+  border-radius: 50px;
+  width: 30%; /* Ajusta el ancho para que quepan dos columnas */
+  font-size: 2em;
+  font-weight: bold;
+  opacity: 90%;
+  background-color: rgba(121, 169, 129, 0.8); /* Verde de la empresa con opacidad */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  z-index: 10; /* Asegura que el canvas esté detrás de otros elementos */
+}
+
+.recuadro:hover {
+  transform: scale(1.05);
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.galileo-image {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 15%; /* Agrandar la imagen */
+  height: auto;
+}
+
+canvas {
+  position: fixed;
+  top: 5%;
+  left: 7%;
+  z-index: 10;  
+}
+
+.galileoCanvas {
+  width: 90%;
+  height: auto;
+  position: absolute;
+  top: 2%;
+  left: 37%;
+  transform: scaleX(-1); /* Voltea horizontalmente */
+  z-index: 10; /* Envía al fondo */
+}

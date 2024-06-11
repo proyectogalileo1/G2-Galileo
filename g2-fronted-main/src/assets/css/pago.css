@@ -1,0 +1,90 @@
+/* Estilos principales del contenedor de la página de pago */
+.datos-bancarios-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Estilos para el formulario de registro de pago */
+  .form-register {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  /* Estilos para los controles de entrada */
+  .controls {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Contenedor para los inputs de mes y año de la tarjeta */
+  .mes-ano-tarjeta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  /* Estilos para los inputs de mes y año */
+  .mes-ano-tarjeta__mes, .mes-ano-tarjeta__ano {
+    width: 45%;
+  }
+  
+  /* Estilos generales para los botones */
+  .boton {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  /* Estilo para el botón de validar */
+  .boton.validar {
+    background-color: #79a981; /* Verde de la empresa */
+  }
+  
+  /* Estilo para el botón de regresar */
+  .boton.atras {
+    background-color: #9b9b9b; /* Gris 1 */
+  }
+  
+  /* Efecto al pasar el mouse sobre los botones */
+  .boton:hover {
+    opacity: 0.8;
+  }
+  
+  /* Estilos para el separador entre los inputs de mes y año */
+  .mes-ano-tarjeta__separador {
+    font-size: 1.5em;
+    margin: 0 5px;
+  }
+  
+  /* Estilo para los títulos dentro de la página */
+  h1, h2, h3, h4 {
+    color: #333333; /* Gris oscuro para mayor legibilidad */
+    margin: 20px 0;
+  }
+  
+  /* Asegura que el texto y los íconos dentro del formulario sean centrados */
+  .form-register > label,
+  .form-register > input,
+  .form-register > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  

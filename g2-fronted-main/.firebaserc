@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "reactfirebasegalilleo",
+    "galilleo": "reactfirebasegalilleo"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}

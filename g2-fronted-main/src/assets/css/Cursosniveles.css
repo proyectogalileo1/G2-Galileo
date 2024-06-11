@@ -1,0 +1,230 @@
+.pagina-principal-container {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.barra {
+  width: auto;
+  max-width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1000;
+}
+
+.elemento {
+  margin: 0;
+  font-size: 250%;
+  color: #79a981;
+  width: 100%;
+}
+
+.menu-lateral {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 250px;
+  background-color: rgba(51, 51, 51, 0.9);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-lateral.open {
+  transform: translateX(0);
+}
+
+.menu-lateral a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.cuadro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.cuadros {
+  padding: 40px;
+  border-radius: 50px;
+  background-color: rgba(121, 169, 129, 0.8);
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  width: 20%; /* Ajusta el ancho para que sean más estrechos */
+  margin: 10px; /* Espaciado entre los cuadros */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  z-index: 10; /* Asegura que el canvas esté detrás de otros elementos */
+}
+
+.cuadros:hover {
+  transform: scale(1.05);
+}
+
+.chat-toggle-button {
+  z-index: 10; /* Asegura que el canvas esté detrás de otros elementos */
+}
+
+.medio {
+  margin-top: 10px;
+}
+
+.galileo-image {
+  position: absolute;
+  bottom: -11%;
+  right: 0;
+  width: 19%;
+  height: auto;
+  margin-right: 4%;
+}
+
+.contenido {
+  padding: 20px;
+  margin-top: 80px; /* Para evitar superposición con la barra */
+}
+
+.contenido h2 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.contenido p, .contenido ul {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.5;
+}
+
+.contenido ul {
+  padding-left: 20px;
+}
+
+.contenido ul li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1023px) {
+  .galileo-image {
+    width: 25%;
+    bottom: -5%;
+  }
+
+  .cuadros {
+    width: 45%;
+    font-size: 1.5em;
+    padding: 20px;
+  }
+
+  .contenido {
+    padding: 15px;
+  }
+
+  .contenido h2 {
+    font-size: 1.3em;
+  }
+
+  .contenido p, .contenido ul {
+    font-size: 0.9em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cuadros {
+    width: 45%;
+    font-size: 1.5em;
+    padding: 20px;
+  }
+
+  .galileo-image {
+    width: 15%;
+    bottom: -5%;
+  }
+
+  .contenido {
+    padding: 15px;
+  }
+
+  .contenido h2 {
+    font-size: 1.3em;
+  }
+
+  .contenido p, .contenido ul {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 530px) {
+  .barra {
+    padding: 15px;
+    flex-direction: row;
+  }
+
+  .elemento {
+    font-size: 1.5em;
+  }
+
+  .menu-lateral {
+    width: 200px;
+  }
+
+  .cuadros {
+    width: 80%;
+    font-size: 1.2em;
+    padding: 20px;
+  }
+
+  .galileo-image {
+    width: 28%;
+    bottom: -3%;
+    margin-right: 2%;
+  }
+
+  .contenido {
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  .contenido h2 {
+    font-size: 1.2em;
+  }
+
+  .contenido p, .contenido ul {
+    font-size: 0.8em;
+  }
+}
+
+canvas {
+  position: fixed;
+  top: 2%;
+  left: 40%;
+  z-index: 1;
+  transform: scaleX(-1); /* Voltea horizontalmente */
+}
+
+
